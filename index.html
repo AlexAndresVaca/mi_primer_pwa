@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- PWA -->
+    <!-- Pintar la barra superior o de estado ANDROID -->
+    <meta name="theme-color" content="#387c6d" />
+    <!-- SEO -->
+    <!-- Optimizado para dispositivos móviles -->
+    <meta name="MobileOptimize" content="width" />
+    <!-- Amigable para el uso en movil -->
+    <meta name="HandHeldFriendly" content="true" />
+    <!-- Modificar barra de estado en IOS -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <!-- CONTENT
+        default = blanca,
+        black = negra
+        black-translucent = toma un color de manera dinámica; 
+                            caso contrario negro
+     -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <!-- ICONOS -->
+    <link rel="shortcut icon" href="img/favicon.png" type="image/png" />
+    <!-- Icono para que demos click -->
+    <link rel="apple-touch-icon" href="img/favicon.png" />
+    <link rel="apple-touch-startup-image" href="img/favicon.png" />
+    <!-- Manifiesto -->
+    <link rel="manifest" href="./manifest.json" />
+    <!-- FIN ICONOS -->
+
+    <!-- Fin PWA -->
+    <title>Vue 3 - Contador</title>
+    <script src="https://unpkg.com/vue@next"></script>
+    <!-- Stilos -->
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+    <div id="app" class="app">
+        <div class="title">
+            <h1>{{title}}</h1>
+        </div>
+        <div class="contador">
+            <p>{{count}}</p>
+        </div>
+        <div class="buttons">
+            <button class="restar" v-on:click="count--">Restar</button>
+            <button class="sumar" v-on:click="count++">Sumar</button>
+        </div>
+        <div class="buttons">
+            <button class="restar" @click="restar">-1</button>
+            <button class="sumar" @click="sumar">+1</button>
+        </div>
+    </div>
+    <script src="./load.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/mountApp.js"></script>
+</body>
+
+</html>
